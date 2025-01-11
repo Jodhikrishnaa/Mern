@@ -5,7 +5,7 @@ app.use(express.json()) //middleware
 const mongoose = require("mongoose")
 const {v4:uuidv4}=require("uuid")
 
-mongoose.connect("mongodb://localhost:27017/expense")  //Connection
+mongoose.connect("mongodb+srv://jodhikrishnaap2023cce:jodhi123@cluster0.rj8waut.mongodb.net/expense")  //Connection
 .then(()=>{
     console.log("mangoDB connected")
 })
@@ -86,4 +86,3 @@ app.delete("/api/expenses/:Id", async (req, res) => {
 app.listen(3000,()=>{
     console.log("Server is running")
 })//it specifies the certain port
-
